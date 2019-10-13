@@ -6,6 +6,7 @@ This project is a demo for using rest-assured to test API.
 
 * The command `./gradlew clean build` will do the full build.
 * The command `./graldew test` will run the tests.
+* The command `graldew clean build` and `graldew test` should be used if using Windows cmd.
 
 ## Check Test Results 
 
