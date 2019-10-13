@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+repositories {
+    mavenLocal()
+    maven {
+        url "https://repo1.maven.org/maven2/"
+    }
+}
+
+ext {
+    cucumberVersion = '2.3.0'
+    cucumberPicocontainerVersion = '1.2.5'
+    restassuredVersion = '3.0.7'
+    junitVersion = '4.12'
+}
+
+dependencies {
+    testCompile "junit:junit:$junitVersion"
+    testCompile "io.rest-assured:json-schema-validator:3.1.0"
+    testCompile "uk.co.datumedge:hamcrest-json:0.2"
+    testCompile "org.assertj:assertj-core:3.10.0"
+    testCompile "com.bazaarvoice.jolt:json-utils:0.1.1"
+    testCompile "org.codehaus.groovy:groovy-all:2.4.15"
+    testCompile "io.rest-assured:rest-assured:$restassuredVersion"
+    testCompile "info.cukes:cucumber-picocontainer:$cucumberPicocontainerVersion"
+    testCompile "io.cucumber:cucumber-java:$cucumberVersion"
+    testCompile "io.cucumber:cucumber-junit:$cucumberVersion"
+    testCompile "net.masterthought:cucumber-reporting:3.15.0"
+}
